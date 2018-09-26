@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<h1>Add Person</h1>
+<% if(typeof errors != 'undefined'){ %>
+    <ul>
+        <% errors.forEach(function(error) { %>
+            <li>
+                <%= error.msg %>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+<form method='post' actions='localhost:3000/users/add'>
+    <label>First Name</label> <br>
+    <input type="text" name="first_name">
+    <br>
+    
+    <label>Last Name</label> <br>
+    <input type="text" name="last_name">
+    <br>
+    
+    <input type="submit" value="Submit">
+</form>
+
+<h1>Users List</h1>
+<ul>
+<% users.forEach(function(user){ %>
+    <li>
+        <%= user.first_name %> <%= user.last_name %> - <a  href='#' class="deleteUser" data-id="<%= user._id%>"> Delete Users</a>
+    </li>
+<% }) %>
+</ul>
+
+<% include partials/footer %>

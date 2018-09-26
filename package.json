@@ -1,0 +1,18 @@
+{
+  "name": "node_test",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.6.1",
+    "express": "*",
+    "express-validator": "^5.3.0",
+    "mongojs": "^2.6.0"
+  },
+  "author": "jasonde",
+  "license": "ISC"
+}
